@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧾 BillGenius Pro — Multi-Shop POS & Khatabook Invoicing Suite
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Netlify Status](https://img.shields.io/badge/Deploy-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com/)
 
-First, run the development server:
+A modern, full-featured **Cloud Point-of-Sale (POS) & Khata Ledger Engine** designed for retail shopkeepers, wholesalers, and small businesses. Inspired by the functionality of **Khatabook & Vyapar**, it features multi-tenant shopkeeper authentication, NPCI-compliant dynamic UPI QR generation, dual print layouts (A4 GST & 80mm POS slip), and instant bill dispatch via WhatsApp & SMS.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Live Demo
+🔗 **Live Application URL:** [https://your-netlify-site.netlify.app](https://your-netlify-site.netlify.app)  
+*(Apna actual Netlify link yahan paste karein)*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Key Features
 
-## Learn More
+### 🏪 1. Multi-Tenant Shopkeeper Authentication
+* **Independent Shop Accounts:** Separate accounts for multiple owners (e.g., Kirana Store, Sweets Shop, Hardware).
+* **Persistent Session:** Client-side local storage auto-loads shop profile, landmark, address, and QR configurations without re-entry.
+* **Security & UX:** Password visibility toggle (`Show/Hide`) with input sanitization.
 
-To learn more about Next.js, take a look at the following resources:
+### 💳 2. NPCI-Compliant Dynamic UPI QR Engine
+* **Universal UPI Compatibility:** Works with PhonePe, Google Pay, Paytm, BHIM, and Navi without parsing errors.
+* **Auto-Sanitized Payee Meta:** Strips illegal characters from merchant names to adhere strictly to NPCI URI specs.
+* **Dynamic Settle Amount:** QR code updates dynamically to bill either the **Full Amount** or the **Pending Udhaar Balance**.
+* **Custom Standee Upload:** Allows merchants to upload their own physical QR code sticker.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📄 3. Dual-Format Print Engine
+* **A4 GST Tax Invoice:** Full compliance layout with HSN/SAC codes, CGST + SGST breakdown, and banking/RTGS settlement fields.
+* **80mm POS Thermal Slip:** Compact, high-contrast receipt layout engineered specifically for thermal receipt printers.
+* **Zero CSS Rasterization Bugs:** Pure `@media print` rules generating vector-sharp PDFs without DOM blurring.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📒 4. Khatabook-Style Ledger & Settlement
+* **Jama vs. Udhaar Tracking:** Visual balance cards highlighting *You Got (Paid)* vs. *You Gave (Udhaar)*.
+* **Multi-Payment Modes:** Supports Cash, UPI, Split, and Khata (Credit).
+* **Change Calculator:** Auto-calculates cash change to return when customers pay higher currency denominations.
+* **Flexible Discounts:** Instant toggle between Flat Rupee (₹) and Percentage (%) discounts.
 
-## Deploy on Vercel
+### 📲 5. Instant WhatsApp & SMS Dispatch
+* **1-Click WhatsApp Delivery:** Sends formatted itemized receipts with live UPI payment links directly to customer WhatsApp chats.
+* **Native SMS Trigger:** Deep-links into the mobile SMS messaging client for non-smartphone or offline customers.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tech Stack
+
+* **Framework:** Next.js (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Icons:** Lucide React
+* **Deployment:** Netlify / Vercel
+
+---
+
+## 📂 Project Structure
+
+```text
+├── app/
+│   ├── layout.tsx         # Global fonts, metadata & scripts
+│   ├── page.tsx           # Complete POS & Invoicing dashboard engine
+│   └── globals.css        # Print media queries & custom utility styles
+├── public/                # Static assets & icons
+├── .gitignore             # Ignored directories (node_modules, .next)
+├── package.json           # Dependencies & scripts
+├── tsconfig.json          # TypeScript configuration
+└── README.md              # Project documentation
