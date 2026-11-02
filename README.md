@@ -1,4 +1,4 @@
-# 🧾 BillGenius Pro — Multi-Shop POS & Khatabook Invoicing Suite
+# 🧾 BillGenius Pro — Multi-Shop POS & Khatabook Invoicing Site
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
